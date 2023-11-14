@@ -8,6 +8,12 @@ public class EsemenyekOsszevonasa extends javax.swing.JFrame {
         int osszeg;
     public EsemenyekOsszevonasa() {
         initComponents();
+        osszeg = 0;
+        frissit();
+    }
+
+    private void frissit() {
+        jTextField1.setText(osszeg + " Ft");
     }
 
 
@@ -46,6 +52,8 @@ public class EsemenyekOsszevonasa extends javax.swing.JFrame {
         });
 
         jLabel1.setText("összeg:");
+
+        jTextField1.setEditable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -89,7 +97,7 @@ public class EsemenyekOsszevonasa extends javax.swing.JFrame {
         }else{
             osszeg -= 200;
         }
-        jTextField1.setText(osszeg + " Ft");
+        frissit();
     }//GEN-LAST:event_osszesito
 
     public static void main(String args[]) {
